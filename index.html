@@ -3,35 +3,36 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Konectus — Propuesta de evolución 2026</title>
-<meta name="description" content="Quiénes somos hoy, la propuesta, cómo funcionaría y por qué: Konectus, plataforma AI-native modular para B2B y B2C.">
+<title>Konectus — Propuesta para socios fundadores</title>
+<meta name="description" content="Qué es Konectus hoy, qué proponemos, cómo funcionan los módulos, cómo escala, por qué lanzar en México y cómo volvernos globales y multi-idioma.">
 <style>
   :root {
-    --indigo: #4F46E5; --indigo-700: #4338CA; --indigo-50: #EEF2FF; --violet: #8B5CF6; --violet-50: #F5F3FF;
-    --ink: #0F172A; --slate-700: #334155; --slate-500: #64748B; --slate-300: #CBD5E1; --slate-200: #E2E8F0; --slate-50: #F8FAFC;
-    --green: #047857; --green-50: #ECFDF5; --amber: #B45309; --amber-50: #FFFBEB;
+    --indigo: #4F46E5; --indigo-50: #EEF2FF; --violet: #8B5CF6; --violet-50: #F5F3FF;
+    --ink: #0F172A; --slate-700: #334155; --slate-500: #64748B; --slate-200: #E2E8F0; --slate-50: #F8FAFC;
+    --green: #047857; --green-50: #ECFDF5; --amber: #B45309; --amber-50: #FFFBEB; --red: #B91C1C; --red-50: #FEF2F2;
   }
   * { box-sizing: border-box; }
   html, body { margin: 0; height: 100%; background: #0B0A1F; font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; color: var(--ink); -webkit-font-smoothing: antialiased; }
-  /* Escenario: cada diapositiva mide 1280x720 y se escala para caber en la ventana */
+  /* Cada diapositiva mide 1280x720 y se escala para caber en la ventana */
   .stage { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
   .deck { position: relative; width: 1280px; height: 720px; transform-origin: center center; }
-  .slide { position: absolute; inset: 0; background: #fff; border-radius: 18px; padding: 52px 72px 60px; display: none; flex-direction: column; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
+  .slide { position: absolute; inset: 0; background: #fff; border-radius: 18px; padding: 48px 72px 56px; display: none; flex-direction: column; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.45); }
   .slide.active { display: flex; }
-  .foot { position: absolute; left: 72px; right: 32px; bottom: 22px; display: flex; justify-content: space-between; font-size: 12px; color: var(--slate-500); }
-  .kicker { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--indigo); margin-bottom: 10px; }
+  .foot { position: absolute; left: 72px; right: 32px; bottom: 20px; display: flex; justify-content: space-between; font-size: 12px; color: var(--slate-500); }
+  .kicker { font-size: 13px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--indigo); margin-bottom: 8px; }
   h1 { font-size: 56px; line-height: 1.05; margin: 0 0 18px; letter-spacing: -.025em; }
-  h2 { font-size: 36px; line-height: 1.12; margin: 0 0 22px; letter-spacing: -.015em; }
-  h3 { font-size: 19px; margin: 0 0 8px; }
-  p, li { font-size: 18px; line-height: 1.5; color: var(--slate-700); }
-  ul { margin: 0; padding-left: 20px; } li { margin-bottom: 7px; }
+  h2 { font-size: 34px; line-height: 1.12; margin: 0 0 20px; letter-spacing: -.015em; }
+  h3 { font-size: 18px; margin: 0 0 8px; }
+  p, li { font-size: 17px; line-height: 1.5; color: var(--slate-700); }
+  p { margin: 0 0 10px; }
+  ul { margin: 0; padding-left: 20px; } li { margin-bottom: 6px; }
   b { color: var(--ink); }
-  .lead { font-size: 22px; max-width: 920px; }
+  .lead { font-size: 22px; max-width: 960px; }
   .g2 { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 22px; }
   .g3 { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 18px; }
   .g4 { display: grid; grid-template-columns: repeat(4, minmax(0,1fr)); gap: 14px; }
-  .card { border: 1px solid var(--slate-200); border-radius: 14px; padding: 18px 20px; background: #fff; }
-  .card p, .card li { font-size: 15.5px; margin: 0; } .card li { margin-bottom: 5px; }
+  .card { border: 1px solid var(--slate-200); border-radius: 14px; padding: 16px 20px; background: #fff; }
+  .card p, .card li { font-size: 15px; margin: 0; } .card li { margin-bottom: 4px; } .card p + p { margin-top: 6px; }
   .card.ai { background: var(--violet-50); border-color: #DDD6FE; }
   .card.ind { background: var(--indigo-50); border-color: #C7D2FE; }
   .card.ok { background: var(--green-50); border-color: #A7F3D0; }
@@ -40,28 +41,34 @@
   .tag.v { background: var(--violet-50); color: #6D28D9; border-color: #DDD6FE; }
   .tag.g { background: var(--green-50); color: var(--green); border-color: #A7F3D0; }
   .tag.a { background: var(--amber-50); color: var(--amber); border-color: #FDE68A; }
-  table { border-collapse: collapse; width: 100%; font-size: 15px; }
-  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--slate-500); padding: 8px 10px; border-bottom: 1px solid var(--slate-200); }
-  td { padding: 9px 10px; border-bottom: 1px solid var(--slate-200); color: var(--slate-700); vertical-align: top; }
+  .tag.r { background: var(--red-50); color: var(--red); border-color: #FECACA; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th { text-align: left; font-size: 11.5px; text-transform: uppercase; letter-spacing: .07em; color: var(--slate-500); padding: 7px 10px; border-bottom: 1px solid var(--slate-200); }
+  td { padding: 8px 10px; border-bottom: 1px solid var(--slate-200); color: var(--slate-700); vertical-align: top; line-height: 1.4; }
   .dark { background: linear-gradient(135deg, #1E1B4B 0%, #3730A3 50%, #6D28D9 100%); color: #fff; justify-content: center; }
   .dark h1, .dark h2, .dark p, .dark li, .dark b { color: #fff; }
   .dark .kicker { color: #C7D2FE; } .dark .foot { color: #A5B4FC; }
-  .act { font-size: 120px; font-weight: 800; color: rgba(255,255,255,.18); line-height: 1; margin-bottom: 8px; }
-  .layers { display: flex; flex-direction: column; gap: 10px; }
-  .layer { border-radius: 12px; padding: 14px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 16.5px; gap: 24px; }
-  .layer b { font-size: 17.5px; white-space: nowrap; }
-  /* Capturas: se ven nítidas y se amplían con un clic */
+  .act { font-size: 110px; font-weight: 800; color: rgba(255,255,255,.18); line-height: 1; margin-bottom: 8px; }
+  .layers { display: flex; flex-direction: column; gap: 9px; }
+  .layer { border-radius: 12px; padding: 13px 20px; display: flex; justify-content: space-between; align-items: center; font-size: 16px; gap: 24px; }
+  .layer b { font-size: 17px; white-space: nowrap; }
+  /* Capturas: marco con la misma proporción de la pantalla (5:4), así no se recortan los lados.
+     Las pantallas largas muestran su parte superior; con un clic se ve la pantalla completa. */
   figure { margin: 0; min-width: 0; }
-  .shot { display: block; width: 100%; border: 1px solid var(--slate-200); border-radius: 10px; object-fit: cover; object-position: top left; cursor: zoom-in; background: var(--slate-50); }
-  figcaption { font-size: 13px; color: var(--slate-500); margin-top: 7px; line-height: 1.35; }
+  .shot { display: block; width: 100%; aspect-ratio: 5 / 4; height: auto; border: 1px solid var(--slate-200); border-radius: 10px; object-fit: cover; object-position: top center; cursor: zoom-in; background: var(--slate-50); }
+  .phone { display: block; height: 470px; width: auto; max-width: 100%; border: 1px solid var(--slate-200); border-radius: 18px; cursor: zoom-in; background: var(--slate-50); }
+  figcaption { font-size: 13px; color: var(--slate-500); margin-top: 6px; line-height: 1.35; }
   figcaption b { color: var(--indigo); }
-  .h520 { height: 520px; } .h470 { height: 470px; } .h420 { height: 420px; } .h300 { height: 300px; } .h250 { height: 250px; } .h150 { height: 150px; }
-  .side { display: grid; grid-template-columns: minmax(0,1.55fr) minmax(0,1fr); gap: 32px; align-items: start; }
+  .side { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(0,1fr); gap: 30px; align-items: start; }
   .flow { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 14px; }
-  .big { font-size: 60px; font-weight: 800; color: var(--indigo); line-height: 1; }
-  .src { font-size: 11.5px; color: var(--slate-500); margin-top: auto; padding-top: 10px; }
+  .big { font-size: 46px; font-weight: 800; color: var(--indigo); line-height: 1; margin-bottom: 6px; }
+  .src { font-size: 11px; color: var(--slate-500); margin-top: auto; padding-top: 8px; line-height: 1.45; }
   .src a { color: var(--slate-500); }
-  .num { display: inline-flex; width: 26px; height: 26px; border-radius: 999px; background: var(--indigo); color: #fff; font-size: 13px; font-weight: 700; align-items: center; justify-content: center; margin-right: 8px; }
+  .num { display: inline-flex; width: 26px; height: 26px; border-radius: 999px; background: var(--indigo); color: #fff; font-size: 13px; font-weight: 700; align-items: center; justify-content: center; margin-right: 8px; vertical-align: 4px; }
+  .steps { display: flex; gap: 10px; align-items: stretch; }
+  .steps .card { flex: 1; }
+  .arrow { align-self: center; color: var(--slate-500); font-size: 22px; }
+  .note { font-size: 13.5px; color: var(--slate-500); margin-top: 10px; }
   /* Controles */
   .bar { position: fixed; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(255,255,255,.08); z-index: 5; }
   .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--indigo), var(--violet)); transition: width .25s; }
@@ -88,35 +95,52 @@
 
 <!-- ============ PORTADA ============ -->
 <section class="slide dark">
-  <div class="kicker">Propuesta de evolución · 2026</div>
-  <h1>Konectus</h1>
-  <p class="lead" style="font-size:26px">De CRM omnicanal a la plataforma AI-native para la operación diaria con clientes, configurable para cualquier empresa B2B o B2C.</p>
-  <div class="g4" style="margin-top:38px;max-width:980px">
-    <div><p style="font-size:15px;margin:0;color:#A5B4FC">01</p><p style="margin:0;font-size:18px"><b>Quiénes somos hoy</b></p></div>
-    <div><p style="font-size:15px;margin:0;color:#A5B4FC">02</p><p style="margin:0;font-size:18px"><b>Por qué cambiar</b></p></div>
-    <div><p style="font-size:15px;margin:0;color:#A5B4FC">03</p><p style="margin:0;font-size:18px"><b>La propuesta</b></p></div>
-    <div><p style="font-size:15px;margin:0;color:#A5B4FC">04</p><p style="margin:0;font-size:18px"><b>Cómo funcionaría</b></p></div>
+  <div class="kicker">Documento para socios fundadores · 2026</div>
+  <h1>Konectus: de CRM de WhatsApp<br>a plataforma modular</h1>
+  <p class="lead" style="font-size:24px">Una sola plataforma que cualquier empresa configura con módulos, con IA opcional. Lanzamiento en México y crecimiento global en varios idiomas.</p>
+  <div class="g4" style="margin-top:34px;max-width:1080px;grid-template-columns:repeat(6,minmax(0,1fr))">
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">01</p><p style="margin:0;font-size:16px"><b>Hoy</b></p></div>
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">02</p><p style="margin:0;font-size:16px"><b>Por qué cambiar</b></p></div>
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">03</p><p style="margin:0;font-size:16px"><b>Módulos</b></p></div>
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">04</p><p style="margin:0;font-size:16px"><b>Escalabilidad</b></p></div>
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">05</p><p style="margin:0;font-size:16px"><b>México → global</b></p></div>
+    <div><p style="font-size:14px;margin:0;color:#A5B4FC">06</p><p style="margin:0;font-size:16px"><b>Plan y decisiones</b></p></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Usa ← → para avanzar · clic en una captura para ampliarla</span></div>
+  <div class="foot"><span>Konectus</span><span>← → para avanzar · clic en una captura para verla completa</span></div>
+</section>
+
+<!-- ============ RESUMEN ============ -->
+<section class="slide">
+  <div class="kicker">Resumen en una página</div>
+  <h2>Lo que proponemos, en 5 frases</h2>
+  <div class="layers">
+    <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>1 · Hoy</b><span>Tenemos la tecnología de un CRM omnicanal con IA, pero el mercado nos ve como "otro CRM de WhatsApp".</span></div>
+    <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>2 · El problema</b><span>Competir solo con bandeja + bot es guerra de precios: eso se copia en semanas con IA.</span></div>
+    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>3 · La propuesta</b><span>Un núcleo común + módulos que se activan (Ventas, Soporte, Cobranza, Quejas…) + IA opcional por módulo.</span></div>
+    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>4 · Cómo escala</b><span>Un nicho o país nuevo es configuración (módulo + plantilla + paquete de país), no un producto nuevo.</span></div>
+    <div class="layer" style="background:var(--violet-50);border:1px solid #DDD6FE"><b>5 · Mercado</b><span>Lanzamos en México (español, WhatsApp en ~93% de usuarios) y crecemos por olas: LATAM, Brasil y mundo en inglés.</span></div>
+  </div>
+  <p style="margin-top:16px"><b>Lo que necesitamos decidir juntos</b> está al final: foco del lanzamiento, nicho inicial, orden de países y metas de 90 días.</p>
+  <div class="foot"><span>Konectus</span><span>Resumen</span></div>
 </section>
 
 <!-- ============ 01 HOY ============ -->
 <section class="slide dark">
   <div class="act">01</div>
-  <h2 style="font-size:48px">Quiénes somos hoy</h2>
-  <p class="lead">Una base técnica sólida que todavía se presenta como "otro CRM de WhatsApp".</p>
+  <h2 style="font-size:48px">Lo que somos hoy</h2>
+  <p class="lead">Una base técnica sólida, presentada como un CRM de WhatsApp más.</p>
   <div class="foot"><span>Konectus</span><span>Hoy</span></div>
 </section>
 
 <section class="slide">
   <div class="kicker">01 · Hoy</div>
-  <h2>Konectus hoy: un CRM omnicanal con IA</h2>
+  <h2>Lo que ya existe en el producto</h2>
   <div class="g3">
-    <div class="card"><span class="tag">Producto</span><ul><li>Bandeja unificada para agentes</li><li>Contactos, embudo Kanban y tableros</li><li>Bots, agentes IA y respuestas automáticas</li><li>Aprobaciones y actividad de IA</li><li>Facturación y créditos de IA</li></ul></div>
-    <div class="card"><span class="tag">Canales</span><ul><li>WhatsApp (API oficial y conexión por QR)</li><li>Instagram y Messenger</li><li>Telegram</li><li>Correo electrónico</li><li>Mensajería en tiempo real para agentes</li></ul></div>
-    <div class="card"><span class="tag">Infraestructura propia</span><ul><li>Servicios por canal y despachador de mensajes</li><li>Bus de eventos y trazabilidad entre servicios</li><li>Motor de IA con búsqueda en documentos y flujos</li><li>Backend multi-empresa con roles</li><li>Monitoreo y página de estado</li></ul></div>
+    <div class="card"><span class="tag">Producto</span><ul><li>Bandeja unificada para agentes</li><li>Contactos, embudo Kanban y tableros por departamento</li><li>Tickets</li><li>Bots, agentes IA y aprobaciones</li><li>Facturación y créditos de IA</li></ul></div>
+    <div class="card"><span class="tag">Canales</span><ul><li>WhatsApp: API oficial y conexión por QR</li><li>Instagram y Messenger</li><li>Telegram</li><li>Mensajería en tiempo real para agentes</li></ul></div>
+    <div class="card"><span class="tag">Plataforma</span><ul><li>Un servicio por canal + despachador de mensajes</li><li>Bus de eventos entre servicios</li><li>Motor de IA aparte, con documentos y flujos</li><li>Multi-empresa con roles</li><li><b>Interfaz ya en español, inglés y portugués</b></li></ul></div>
   </div>
-  <p style="margin-top:22px">Esto es más de lo que tiene la mayoría de herramientas nuevas del mercado. El problema no es la tecnología: es <b>cómo se posiciona y qué resuelve</b>.</p>
+  <p style="margin-top:18px">La tecnología no es el problema. El problema es <b>cómo nos posicionamos y qué resolvemos que otros no</b>.</p>
   <div class="foot"><span>Konectus</span><span>Revisado en el repositorio del proyecto</span></div>
 </section>
 
@@ -124,8 +148,8 @@
   <div class="kicker">01 · Hoy</div>
   <h2>Lo que nos impulsa y lo que nos frena</h2>
   <div class="g2">
-    <div class="card ok"><span class="tag g">A favor</span><ul><li>Canales propios, incluida la API oficial de WhatsApp</li><li>La ruta de mensajes a los agentes es independiente de la IA: si la IA cae, la operación sigue</li><li>Motor de IA propio, no un "plugin"</li><li>Pagos y créditos ya integrados</li></ul></div>
-    <div class="card warn"><span class="tag a">En contra</span><ul><li>Se percibe como un CRM de WhatsApp más, igual a la competencia</li><li>Los negocios están atados a una conversación: no sirven para cobranza ni importación de datos</li><li>Los tickets no son configurables ni tienen tiempos de respuesta</li><li>Solo medios de pago internacionales</li><li>Demasiados frentes abiertos para un equipo pequeño</li></ul></div>
+    <div class="card ok"><span class="tag g">A favor</span><ul><li>Canales propios, incluida la API oficial de WhatsApp</li><li>Si la IA falla, los mensajes siguen llegando a los agentes: son dos rutas separadas</li><li>Motor de IA propio, no un "plugin"</li><li>Pagos y créditos ya integrados</li><li>Base multi-idioma lista (es, en, pt)</li></ul></div>
+    <div class="card warn"><span class="tag a">En contra</span><ul><li>Nos perciben igual que la competencia</li><li>Cada negocio está atado a una conversación: no sirve para cobranza ni para importar datos</li><li>Tickets sin configuración ni tiempos de respuesta</li><li>Sin pagos locales (OXXO, SPEI) ni factura CFDI</li><li>Demasiados frentes abiertos para un equipo pequeño</li></ul></div>
   </div>
   <div class="foot"><span>Konectus</span><span>Hoy</span></div>
 </section>
@@ -134,292 +158,417 @@
 <section class="slide dark">
   <div class="act">02</div>
   <h2 style="font-size:48px">Por qué cambiar</h2>
-  <p class="lead">El mercado de "CRM con IA para WhatsApp" está saturado, y los clientes siguen frustrados con lo que existe.</p>
+  <p class="lead">En México ya hay muchos CRM de WhatsApp. Si somos uno más, competimos solo por precio.</p>
   <div class="foot"><span>Konectus</span><span>Por qué</span></div>
 </section>
 
 <section class="slide">
   <div class="kicker">02 · Por qué</div>
-  <h2>Lo que los clientes no logran resolver hoy</h2>
-  <div class="g2">
-    <div class="card"><h3>Lo que se repite en reseñas y foros</h3><ul>
-      <li><b>Costos escondidos</b> y permanencia mínima: el plan barato termina caro.</li>
-      <li>Para <b>personalizar</b> hay que contratar un desarrollador.</li>
-      <li><b>Números bloqueados</b> por conexiones no oficiales.</li>
-      <li>La IA pasa al humano <b>sin contexto</b> y el cliente repite todo.</li>
-      <li>Los CRM grandes integran WhatsApp <b>a medias</b>.</li></ul></div>
-    <div class="card"><h3>Lo que pasa fuera del chat</h3><ul>
-      <li>Los clientes no se van por la bandeja, sino por <b>todo lo demás</b>: cobros, soporte y procesos.</li>
-      <li><b>Riesgo legal</b>: la mayoría de sanciones por datos vienen de WhatsApp y bases comerciales; la Ley 2300 aplica a toda cobranza.</li>
-      <li>Solicitudes que llegan al WhatsApp personal y <b>se pierden sin evidencia</b>.</li></ul></div>
-  </div>
-  <div class="src">Fuentes, contenido parafraseado: <a href="https://prospeo.io/s/kommo-pricing-reviews-pros-and-cons">prospeo (Kommo)</a> · <a href="https://prospeo.io/s/respondio-pricing-reviews-pros-and-cons">prospeo (respond.io)</a> · <a href="https://www.trustpilot.com/review/kommo.com">Trustpilot</a> · <a href="https://hackceleration.com/labs/switch/kommo">hackceleration</a> · <a href="https://help.whaticket.com/es/articles/20773-me-bloquearon-mi-numero-de-whatsapp-que-hago-ahora">Whaticket</a> · <a href="https://myaskai.com/blog/best-ai-customer-service-human-handoff-2026">myaskai</a> · <a href="https://respond.io/fr/blog/whatsapp-crm">respond.io</a> · <a href="https://www.solucioneslegales.net.co/blog/proteccion-de-datos-2026-como-evitar-sanciones-por-whatsapp-formularios-web-y-bases-de-datos-comerciales">solucioneslegales</a> · <a href="https://www.superfinanciera.gov.co/publicaciones/10114938/boletin-juridico-107/">Superfinanciera</a> · <a href="https://kailiving.app/">KaiLiving</a></div>
-  <div class="foot"><span>Konectus</span><span>Por qué</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">02 · Por qué</div>
-  <h2>Una bandeja con IA se copia en un fin de semana. La operación no.</h2>
-  <div class="g3">
-    <div class="card"><span class="tag">Lo que se copia rápido</span><ul><li>Bandeja unificada</li><li>Bot que responde preguntas frecuentes</li><li>Embudo simple</li><li>Envíos masivos</li></ul><p style="margin-top:10px">Hay cientos de clones hechos con IA ("vibecoding").</p></div>
-    <div class="card ind"><span class="tag">Lo que no se copia rápido</span><ul><li>Cumplimiento legal: Ley 2300, Habeas Data, plazos de PQRS</li><li>Conciliación de pagos y evidencia</li><li>Traspaso IA → humano con contexto</li><li>Estabilidad con API oficial a escala</li><li>Módulos y plantillas por industria</li></ul></div>
-    <div class="card ai"><span class="tag v">Lo que Konectus ya tiene</span><ul><li>Canales propios</li><li>Bus de eventos</li><li>Motor de IA con documentos y flujos</li><li>Multi-empresa y pagos</li><li>Monitoreo</li></ul></div>
-  </div>
-  <p style="margin-top:22px">La ventaja no es "tener IA": es resolver <b>el trabajo que pasa después del chat</b>, donde hay reglas, plazos y dinero.</p>
-  <div class="foot"><span>Konectus</span><span>Por qué</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">02 · Por qué</div>
-  <h2>Dónde la competencia es menor</h2>
+  <h2>Con quién competimos hoy en México</h2>
   <table>
-    <tr><th style="width:24%">Nicho</th><th style="width:34%">Competencia hoy</th><th>Espacio para Konectus</th></tr>
-    <tr><td><b>Cooperativas y fondos de empleados</b></td><td>CRM genéricos; adopción digital baja</td><td>Atención, recaudo y PQRS hechos para asociados</td></tr>
-    <tr><td><b>Cobranza conversacional</b></td><td>Herramientas de call center con marcador</td><td>IA que negocia, enlace de pago, conciliación y evidencia de cumplimiento</td></tr>
-    <tr><td><b>PQRS con plazos legales</b></td><td>Formularios web</td><td>WhatsApp como canal real, con reloj legal y evidencia</td></tr>
-    <tr><td><b>Colegios privados</b></td><td>Herramientas solo de cobro</td><td>Admisiones, pensiones y atención a padres en un mismo lugar</td></tr>
-    <tr><td><b>BPO y agencias</b></td><td>Plataformas sin multi-cliente real</td><td>Varios clientes por cuenta, marca blanca, calidad de agentes, VoIP</td></tr>
+    <tr><th style="width:20%">Competidor</th><th style="width:40%">En qué es fuerte</th><th>Lo que no cubre bien (nuestra lectura)</th></tr>
+    <tr><td><b>Leadsales</b> (mexicano)</td><td>CRM simple de WhatsApp para vender, soporte en español</td><td>Cobranza, quejas con plazo, operación más allá de ventas</td></tr>
+    <tr><td><b>Kommo</b></td><td>Embudo de ventas sobre mensajería, bots, IA en planes altos</td><td>Precio que sube por plan y extras; soporte y cobranza</td></tr>
+    <tr><td><b>HubSpot / Zoho</b></td><td>CRM completo y conocido</td><td>Caros para pymes; WhatsApp integrado a medias</td></tr>
+    <tr><td><b>respond.io</b></td><td>Muchos canales y volumen alto</td><td>Precio y complejidad para equipos pequeños</td></tr>
+    <tr><td><b>Chatbots locales</b></td><td>Bots de WhatsApp desde ~MXN 500/mes</td><td>Sin CRM real ni procesos</td></tr>
   </table>
-  <p style="margin-top:12px;font-size:16px">Propiedad horizontal ya tiene más de 8 proveedores en Colombia: no es prioridad.</p>
-  <div class="src">Fuentes, contenido parafraseado: <a href="https://sylar.com.co/software-de-cobranza">Sylar</a> · <a href="https://loscoches.pqrssoftware.com/">pqrssoftware</a> · <a href="https://www.cuotaq.com/blog">CuotaQ</a> · <a href="https://blog.grows.pro/transformando-la-atencion-al-cliente-con-hubspot-service-hub-el-caso-de-exito-de-la-cooperativa-minuto-de-dios">grows</a> · <a href="https://www.estrategiasegura.com/el-impacto-de-la-tecnologia-en-las-cooperativas-de-ahorro-y-credito-en-Colombia">estrategiasegura</a> · <a href="https://www.portea.com.co/administrar-propiedad-horizontal/">portea</a></div>
+  <p style="margin-top:14px"><b>Conclusión:</b> todos venden "bandeja + bot + embudo". Casi nadie resuelve <b>el trabajo que pasa después del chat</b>: cobrar, atender quejas con plazo legal y dar seguimiento con evidencia.</p>
+  <div class="src">Fuentes, contenido parafraseado: <a href="https://kosmo.com.mx/blog/mejores-crm-whatsapp-mexico">kosmo (8 CRM para WhatsApp en México)</a> · <a href="https://yastdigital.com/blog/kommo-vs-leadsales-vs-manychat-vs-wati">yastdigital (Kommo vs Leadsales)</a> · <a href="https://kosmo.com.mx/blog/chatbot-whatsapp-precio-mexico">kosmo (precios de chatbots)</a> · <a href="https://www.visitoai.com/blog/kommo-alternatives">visitoai</a>. La columna derecha es nuestra interpretación.</div>
   <div class="foot"><span>Konectus</span><span>Por qué</span></div>
 </section>
 
-<!-- ============ 03 PROPUESTA ============ -->
+<section class="slide">
+  <div class="kicker">02 · Por qué</div>
+  <h2>Lo que se copia en un fin de semana y lo que no</h2>
+  <div class="g3">
+    <div class="card warn"><span class="tag a">Se copia rápido ("vibecoding")</span><ul><li>Bandeja unificada</li><li>Bot de preguntas frecuentes</li><li>Embudo simple</li><li>Envíos masivos</li></ul><p style="margin-top:10px">Hoy salen clones hechos con IA cada semana.</p></div>
+    <div class="card ind"><span class="tag">No se copia rápido</span><ul><li>Reglas legales por país (cobranza, datos personales, quejas)</li><li>Conciliación de pagos y evidencia</li><li>Traspaso IA → humano con contexto</li><li>WhatsApp oficial estable a escala</li><li>Módulos y plantillas por industria</li></ul></div>
+    <div class="card ai"><span class="tag v">Lo que los clientes piden</span><ul><li>Precio claro, sin costos escondidos</li><li>Configurar sin contratar programador</li><li>Que no les bloqueen el número</li><li>Que la IA no haga repetir todo al cliente</li></ul></div>
+  </div>
+  <p style="margin-top:18px">Nuestra ventaja no es "tener IA": es <b>ser la plataforma donde se resuelve la operación completa</b>, con reglas, plazos y dinero.</p>
+  <div class="src">Quejas frecuentes en reseñas, parafraseadas: <a href="https://prospeo.io/s/kommo-pricing-reviews-pros-and-cons">prospeo (Kommo)</a> · <a href="https://www.trustpilot.com/review/kommo.com">Trustpilot</a> · <a href="https://help.whaticket.com/es/articles/20773-me-bloquearon-mi-numero-de-whatsapp-que-hago-ahora">Whaticket</a> · <a href="https://myaskai.com/blog/best-ai-customer-service-human-handoff-2026">myaskai</a></div>
+  <div class="foot"><span>Konectus</span><span>Por qué</span></div>
+</section>
+
+<!-- ============ 03 MÓDULOS ============ -->
 <section class="slide dark">
   <div class="act">03</div>
-  <h2 style="font-size:48px">La propuesta</h2>
-  <p class="lead">Una sola plataforma base que cada empresa configura según su nicho, su tamaño y cuánta IA quiere usar.</p>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
+  <h2 style="font-size:48px">La propuesta: núcleo + módulos</h2>
+  <p class="lead">Un solo producto. Cada empresa activa lo que necesita, como apps en un celular.</p>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">03 · Propuesta</div>
-  <h2>Núcleo + IA opcional + módulos + plantillas</h2>
+  <div class="kicker">03 · Módulos</div>
+  <h2>Cuatro capas, un solo código</h2>
   <div class="layers">
-    <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>4 · Plantillas por nicho</b><span>Cooperativa · Colegio · E-commerce · Clínica · Agencia · Solo mensajería</span></div>
-    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>3 · Módulos que se activan</b><span>Ventas · Recaudo · PQRS · Tickets · Citas · Campañas · Portal · VoIP</span></div>
-    <div class="layer" style="background:var(--violet-50);border:1px solid #DDD6FE"><b>2 · Capa de IA opcional</b><span>Manual · Asistido · Copiloto · Autónomo, elegido por módulo</span></div>
-    <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>1 · Núcleo para todos</b><span>Canales · Bandeja · Mi día · Contactos · Registros con etapas · Reglas · Analítica · Permisos · API</span></div>
+    <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>4 · Paquete de país</b><span>Idioma, moneda, impuestos y factura, medios de pago, reglas legales, días festivos</span></div>
+    <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>3 · Plantillas por giro</b><span>Tienda en línea · Cooperativa · Colegio · Clínica · Agencia · Despacho de cobranza</span></div>
+    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>2 · Módulos que se activan</b><span>Ventas · Soporte y tickets · Cobranza · Quejas · Citas · Campañas · VoIP · Multi-cliente</span></div>
+    <div class="layer" style="background:var(--violet-50);border:1px solid #DDD6FE"><b>IA opcional</b><span>En cada módulo se elige: Sin IA · Asistido · Copiloto · Autónomo</span></div>
+    <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>1 · Núcleo (todos)</b><span>Canales · Bandeja · Mi día · Contactos · Registros con etapas · Reglas · Analítica · Permisos · API</span></div>
   </div>
-  <p style="margin-top:22px">Mismo producto y mismo código para todos: solo cambia la configuración. Una empresa pequeña nunca ve pantallas de empresa grande; si crece, activa lo siguiente.</p>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
+  <p style="margin-top:16px">El núcleo es lo que tiene cualquier cliente. Los módulos agregan procesos. Las plantillas solo <b>preconfiguran</b> módulos para un giro. El paquete de país adapta todo a las leyes y costumbres locales.</p>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">03 · Propuesta</div>
-  <h2>B2C y B2B: un producto, dos puertas de entrada</h2>
-  <table>
-    <tr><th style="width:18%"></th><th>Puerta 1 · Autoservicio global</th><th>Puerta 2 · Nichos con plantilla</th></tr>
-    <tr><td><b>Cliente</b></td><td>Pymes B2C y B2B de cualquier país: tiendas, servicios, agencias pequeñas</td><td>Cooperativas, financieras, colegios, empresas vigiladas, BPO</td></tr>
-    <tr><td><b>Qué compra</b></td><td>Bandeja omnicanal, Mi día, IA, embudo y tickets simples</td><td>Un resultado: % recuperado, PQRS a tiempo, menos call center</td></tr>
-    <tr><td><b>Cómo se vende</b></td><td>Prueba gratis y alta en minutos, sin hablar con nadie</td><td>Venta consultiva y piloto medido</td></tr>
-    <tr><td><b>Precio de referencia</b></td><td>USD 20–60 por usuario al mes</td><td>USD 500–5.000 por cuenta al mes, o por resultado</td></tr>
-    <tr><td><b>Para qué sirve</b></td><td>Volumen, marca y entrada de clientes</td><td>Margen y defensa frente a la competencia</td></tr>
-  </table>
-  <p style="margin-top:14px;font-size:15px">Las cifras de precio son estimaciones de referencia, no una investigación de mercado.</p>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">03 · Propuesta</div>
-  <h2>AI-native, pero la operación nunca depende de la IA</h2>
+  <div class="kicker">03 · Módulos</div>
+  <h2>¿Qué es un módulo, técnicamente?</h2>
+  <p style="margin-bottom:14px">Un módulo no es código aparte: es un <b>paquete de configuración</b> que el núcleo sabe leer. Declara estas 8 piezas:</p>
   <div class="g4">
-    <div class="card"><span class="tag">0 · Manual</span><p>Solo reglas y plantillas. Costo de IA: USD 0.</p></div>
+    <div class="card ind"><h3>1 · Tipos de registro</h3><p>Ej. "Cuenta por cobrar" con sus etapas: al corriente → vencida → promesa → pagada.</p></div>
+    <div class="card ind"><h3>2 · Campos</h3><p>Monto, días de atraso, fecha de promesa. Se importan de Excel.</p></div>
+    <div class="card ind"><h3>3 · Reglas</h3><p>"Si vence en 3 días, enviar recordatorio entre 8:00 y 21:00."</p></div>
+    <div class="card ind"><h3>4 · Pantallas</h3><p>Entradas de menú, paneles y vistas que aparecen al activarlo.</p></div>
+    <div class="card"><h3>5 · Acciones en el chat</h3><p>Botones dentro de la conversación: "Registrar promesa", "Enviar enlace de pago".</p></div>
+    <div class="card ai"><h3>6 · Agentes de IA</h3><p>Instrucciones, documentos y límites del agente. Opcional.</p></div>
+    <div class="card"><h3>7 · Permisos y reportes</h3><p>Quién ve qué y qué indicadores mide.</p></div>
+    <div class="card"><h3>8 · Precio</h3><p>Lo que cuesta al mes, visible antes de activarlo.</p></div>
+  </div>
+  <p style="margin-top:16px"><b>Por qué importa:</b> como todos los módulos usan el mismo motor (registros, reglas, chat, IA), crear uno nuevo toma <b>semanas, no meses</b>, y mejorar el núcleo mejora todos los módulos a la vez.</p>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Módulos</div>
+  <h2>Ejemplo: una cooperativa activa "Cobranza"</h2>
+  <div class="side">
+    <figure><img class="shot" src="img/20-modulos.jpg" alt="Pantalla de módulos"><figcaption><b>Módulos:</b> se activa con un interruptor; precio y nivel de IA a la vista.</figcaption></figure>
+    <div>
+      <p><span class="num">1</span><b>Activa el módulo.</b> Aparece "Cobranza" en el menú y un asistente de primer uso.</p>
+      <p><span class="num">2</span><b>Importa su cartera</b> desde Excel. La IA sugiere qué columna es cada campo (o se hace a mano).</p>
+      <p><span class="num">3</span><b>El paquete de México aplica las reglas:</b> horario de contacto permitido, aviso de privacidad, registro de cada gestión.</p>
+      <p><span class="num">4</span><b>Se envían recordatorios por WhatsApp.</b> Cuando el cliente responde, el agente (o la IA) registra una promesa o envía el enlace de pago desde el chat.</p>
+      <p><span class="num">5</span><b>El panel muestra</b> cuánto se recuperó, las promesas pendientes y el cumplimiento.</p>
+    </div>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Módulos</div>
+  <h2>Catálogo de módulos y dónde estamos</h2>
+  <table>
+    <tr><th style="width:18%">Módulo</th><th style="width:34%">Qué resuelve</th><th style="width:22%">Para quién</th><th>Estado</th></tr>
+    <tr><td><b>Ventas</b></td><td>Embudo, seguimiento, cotizaciones</td><td>Todos</td><td><span class="tag g">Existe</span> embudo y tableros</td></tr>
+    <tr><td><b>Soporte y tickets</b></td><td>Casos con prioridad y tiempos de respuesta</td><td>Todos</td><td><span class="tag a">Adaptar</span> hacerlo configurable</td></tr>
+    <tr><td><b>Bots e IA</b></td><td>Respuestas, flujos, agentes con aprobación</td><td>Todos</td><td><span class="tag g">Existe</span></td></tr>
+    <tr><td><b>Campañas</b></td><td>Envíos con plantillas oficiales de WhatsApp</td><td>Comercio, servicios</td><td><span class="tag a">Adaptar</span></td></tr>
+    <tr><td><b>Cobranza</b></td><td>Cartera, recordatorios, promesas, pagos, evidencia</td><td>Financieras, cooperativas, colegios</td><td><span class="tag r">Nuevo</span> nicho de lanzamiento</td></tr>
+    <tr><td><b>Quejas y aclaraciones</b></td><td>Casos con plazo legal y expediente</td><td>Financieras, empresas reguladas</td><td><span class="tag r">Nuevo</span></td></tr>
+    <tr><td><b>Citas</b></td><td>Agenda por chat y recordatorios</td><td>Clínicas, servicios</td><td><span class="tag r">Nuevo</span></td></tr>
+    <tr><td><b>Multi-cliente y VoIP</b></td><td>Varias marcas por cuenta; llamadas con transcripción</td><td>Agencias, BPO</td><td><span class="tag r">Nuevo</span> fase 3</td></tr>
+  </table>
+  <p class="note">El estado viene de revisar el repositorio actual. Antes de vender cualquier módulo nuevo hay que construir el "registro genérico con etapas" (hoy cada negocio depende de una conversación).</p>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Módulos</div>
+  <h2>El mismo producto, tres empresas distintas</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">Tienda en línea · 3 personas</span><ul><li><b>Módulos:</b> Ventas + Soporte</li><li><b>IA:</b> Asistido (sugiere respuestas)</li><li><b>Ve:</b> una sola cola en "Mi día", sin departamentos</li><li><b>Compra:</b> sola, en línea, en 15 minutos</li></ul></div>
+    <div class="card ind"><span class="tag">Cooperativa · 40 agentes</span><ul><li><b>Módulos:</b> Cobranza + Quejas + Soporte</li><li><b>IA:</b> Copiloto (pide aprobación en lo sensible)</li><li><b>Ve:</b> departamentos, supervisores, auditoría</li><li><b>Compra:</b> piloto acompañado</li></ul></div>
+    <div class="card ai"><span class="tag v">Agencia · 10 clientes</span><ul><li><b>Módulos:</b> Ventas + Campañas + Multi-cliente</li><li><b>IA:</b> Autónomo en preguntas frecuentes</li><li><b>Ve:</b> un espacio por cliente, con su marca</li><li><b>Compra:</b> como socio revendedor</li></ul></div>
+  </div>
+  <p style="margin-top:18px">Ninguna empresa ve pantallas que no usa. <b>El menú se arma con los módulos activos</b>, y la cantidad de personas define si aparecen departamentos, supervisores y permisos avanzados.</p>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Módulos</div>
+  <h2>IA nativa, pero opcional en cada módulo</h2>
+  <div class="g4">
+    <div class="card"><span class="tag">0 · Sin IA</span><p>Solo reglas y plantillas. Costo de IA: cero.</p></div>
     <div class="card"><span class="tag">1 · Asistido</span><p>La IA sugiere y la persona envía.</p></div>
     <div class="card ai"><span class="tag v">2 · Copiloto</span><p>La IA hace lo rutinario y pide aprobación en lo sensible.</p></div>
     <div class="card ind"><span class="tag">3 · Autónomo</span><p>La IA opera de punta a punta y la persona supervisa.</p></div>
   </div>
-  <div class="g3" style="margin-top:20px">
-    <div class="card ok"><p><b>Si la IA falla</b>, las conversaciones pasan al equipo al instante.</p></div>
-    <div class="card ok"><p><b>Si llega al tope de gasto</b>, se pausa y todo sigue en manual.</p></div>
-    <div class="card ok"><p><b>Cada acción de la IA</b> se etiqueta, se registra y se puede deshacer.</p></div>
+  <div class="g2" style="margin-top:18px">
+    <figure><img class="shot" src="img/09-midia-ia.jpg" alt="Mi día con IA" style="aspect-ratio:16/7"><figcaption><b>Con IA:</b> borradores, traspasos y aprobaciones listos.</figcaption></figure>
+    <figure><img class="shot" src="img/10-midia-manual.jpg" alt="Mi día sin IA" style="aspect-ratio:16/7"><figcaption><b>Sin IA:</b> la misma pantalla, ordenada por reglas. Si la IA falla o llega al tope de gasto, todo pasa a este modo.</figcaption></figure>
   </div>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
+  <div class="foot"><span>Konectus</span><span>Módulos</span></div>
 </section>
 
-<section class="slide">
-  <div class="kicker">03 · Propuesta</div>
-  <h2>Se adapta al tamaño de cada empresa</h2>
-  <div class="side">
-    <figure><img class="shot h470" src="img/04-onb-equipo.jpg" alt="Onboarding: tamaño del equipo"><figcaption>En el onboarding, "¿Cuántas personas atienden?" decide qué se muestra.</figcaption></figure>
-    <table>
-      <tr><th>Tamaño</th><th>Qué se activa</th></tr>
-      <tr><td><b>Solo yo</b></td><td>Bandeja, Mi día y respuestas rápidas</td></tr>
-      <tr><td><b>2 a 5</b></td><td>Tomar conversación, notas internas y menciones. Sin departamentos.</td></tr>
-      <tr><td><b>6 a 50</b></td><td>Departamentos, asignación automática, tiempos de respuesta por área y supervisores</td></tr>
-      <tr><td><b>Más de 50</b></td><td>Sedes, permisos detallados, auditoría y acceso único (SSO)</td></tr>
-    </table>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">03 · Propuesta</div>
-  <h2>Seis promesas, medibles en cada pantalla</h2>
-  <div class="g3">
-    <div class="card"><h3>Fácil de usar</h3><p>Todo se hace desde la conversación. Un agente nuevo atiende en menos de 10 minutos.</p></div>
-    <div class="card"><h3>Fácil de configurar</h3><p>Se elige una plantilla, o se configura conversando con la IA. Primer mensaje en menos de 15 minutos.</p></div>
-    <div class="card"><h3>Fácil de escalar</h3><p>Módulos, usuarios y canales se activan con un interruptor, en menos de 1 minuto.</p></div>
-    <div class="card"><h3>Sin costos ocultos</h3><p>Calculadora pública, medidor de consumo, tope de gasto y sin permanencia.</p></div>
-    <div class="card"><h3>Fácil de entender</h3><p>Cada número dice qué hacer. La IA explica lo que hizo.</p></div>
-    <div class="card ai"><h3>AI-native, con IA opcional</h3><p>Funciona completo sin IA. Con IA, puede operar casi sola.</p></div>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Propuesta</span></div>
-</section>
-
-<!-- ============ 04 CÓMO FUNCIONARÍA ============ -->
+<!-- ============ 04 ESCALABILIDAD ============ -->
 <section class="slide dark">
   <div class="act">04</div>
-  <h2 style="font-size:48px">Cómo funcionaría</h2>
-  <p class="lead">El recorrido completo de una empresa: desde que conoce Konectus hasta su operación diaria. Haz clic en cualquier captura para verla en tamaño completo.</p>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
+  <h2 style="font-size:48px">Escalabilidad</h2>
+  <p class="lead">Escalar en tres sentidos: producto, tecnología y negocio.</p>
+  <div class="foot"><span>Konectus</span><span>Escalabilidad</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">1</span>Conoce el precio exacto y crea su cuenta</h2>
+  <div class="kicker">04 · Escalabilidad</div>
+  <h2>Escalar el producto: crecer sin multiplicar el trabajo</h2>
   <div class="g2">
-    <figure><img class="shot h470" src="img/01-precios.jpg" alt="Precios con calculadora"><figcaption><b>Precios:</b> calculadora con total visible, tarifa de Meta sin recargo, sin permanencia.</figcaption></figure>
-    <figure><img class="shot h470" src="img/02-registro.jpg" alt="Registro"><figcaption><b>Registro:</b> 14 días gratis, sin tarjeta de crédito.</figcaption></figure>
+    <div class="card warn"><span class="tag a">Como lo hace la mayoría</span><ul><li>Un desarrollo a la medida por cliente grande</li><li>Una versión distinta por país</li><li>Cada nicho nuevo = meses de programación</li><li>El equipo termina manteniendo muchos productos</li></ul></div>
+    <div class="card ok"><span class="tag g">Como lo haría Konectus</span><ul><li>Cliente nuevo → elige plantilla, sin programar</li><li>Nicho nuevo → un módulo nuevo sobre el mismo motor</li><li>País nuevo → un paquete de país (idioma, pagos, leyes)</li><li>Una mejora al núcleo llega a todos los clientes</li></ul></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">2</span>Configura su espacio en 5 pasos</h2>
-  <div class="g4">
-    <figure><img class="shot h420" src="img/03-onb-plantilla.jpg" alt="Plantilla"><figcaption><b>Plantilla:</b> B2B, B2C o ambos, y su tipo de operación.</figcaption></figure>
-    <figure><img class="shot h420" src="img/04-onb-equipo.jpg" alt="Equipo"><figcaption><b>Equipo:</b> cuántas personas atienden.</figcaption></figure>
-    <figure><img class="shot h420" src="img/05-onb-canales.jpg" alt="Canales"><figcaption><b>Canales:</b> WhatsApp oficial recomendado y riesgo del QR explicado.</figcaption></figure>
-    <figure><img class="shot h420" src="img/06-onb-ia.jpg" alt="IA"><figcaption><b>IA:</b> nivel, documentos de su negocio y tope de gasto.</figcaption></figure>
+  <div class="g3" style="margin-top:20px">
+    <div><div class="big">1</div><p>solo código para todos los clientes, giros y países</p></div>
+    <div><div class="big">&lt;15 min</div><p>meta para que un cliente pequeño envíe su primer mensaje solo</p></div>
+    <div><div class="big">&lt;1 min</div><p>meta para activar un módulo, usuario o canal</p></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
+  <div class="foot"><span>Konectus</span><span>Escalabilidad</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">2b</span>…o la configura conversando con la IA</h2>
-  <div class="side">
-    <figure><img class="shot h520" src="img/07-config-conversando.jpg" alt="Configurar conversando"></figure>
-    <div><p>La empresa describe cómo trabaja: <i>"Somos una cooperativa con 12.000 asociados, cobramos cuotas con 5 días de gracia…"</i></p><p>La IA propone plantilla, módulos, reglas, nombres y niveles de IA, con una <b>vista previa</b> antes de aplicar.</p><p>Todo se puede ajustar a mano o deshacer.</p></div>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">3</span>Cada persona abre "Mi día" y sabe qué hacer</h2>
-  <div class="g3">
-    <figure><img class="shot h470" src="img/08-midia-pyme.jpg" alt="Mi día pyme"><figcaption><b>Pyme de 3 personas:</b> ventas y soporte en una sola cola.</figcaption></figure>
-    <figure><img class="shot h470" src="img/09-midia-ia.jpg" alt="Mi día con IA"><figcaption><b>Con IA en Copiloto:</b> borradores, traspasos y aprobaciones listos.</figcaption></figure>
-    <figure><img class="shot h470" src="img/10-midia-manual.jpg" alt="Mi día sin IA"><figcaption><b>Sin IA:</b> la misma cola, ordenada por reglas y tiempos de respuesta.</figcaption></figure>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">4</span>Atiende sin perder contexto</h2>
-  <div class="side">
-    <figure><img class="shot h520" src="img/12-bandeja.jpg" alt="Bandeja con traspaso"></figure>
-    <div><p>Cuando la IA no puede resolver, <b>entrega el caso con contexto</b>: motivo, lo que intentó, datos clave y estado de ánimo del cliente.</p><p>Desde el mismo chat se crea un ticket, se radica una PQRS, se registra una promesa de pago o se envía un enlace de pago.</p><p>A la derecha, la ficha del cliente y el consentimiento de datos.</p></div>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">5</span>Vende con un embudo claro</h2>
-  <figure><img class="shot h520" src="img/13-embudo.jpg" alt="Embudo de ventas"><figcaption>La IA avisa qué negocios se están enfriando y cuáles tienen alta probabilidad. Sin IA, el embudo funciona igual.</figcaption></figure>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">6</span>Activa el módulo de su nicho: Recaudo</h2>
-  <div class="g3">
-    <figure><img class="shot h470" src="img/11-recaudo-vacio.jpg" alt="Recaudo primer uso"><figcaption><b>Primer uso:</b> qué es y cómo empezar.</figcaption></figure>
-    <figure><img class="shot h470" src="img/14-importar-cartera.jpg" alt="Importar cartera"><figcaption><b>Importar cartera:</b> Excel o CSV, columnas sugeridas por la IA o a mano.</figcaption></figure>
-    <figure><img class="shot h470" src="img/15-recaudo-panel.jpg" alt="Panel de recaudo"><figcaption><b>Panel:</b> lo recuperado, promesas de pago y cumplimiento de la Ley 2300.</figcaption></figure>
-  </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
-</section>
-
-<section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">7</span>Responde PQRS dentro del plazo legal</h2>
+  <div class="kicker">04 · Escalabilidad</div>
+  <h2>Escalar la tecnología: lo que ya tenemos y lo que falta</h2>
   <div class="g2">
-    <figure><img class="shot h470" src="img/16-pqrs-lista.jpg" alt="Lista de PQRS"><figcaption><b>Lista:</b> plazos en días hábiles y riesgo legal a la vista.</figcaption></figure>
-    <figure><img class="shot h470" src="img/17-pqrs-detalle.jpg" alt="Detalle de PQRS"><figcaption><b>Detalle:</b> reloj legal, borrador de la IA con fuentes, aprobación humana y expediente.</figcaption></figure>
+    <div class="card ok"><span class="tag g">Ya existe</span><ul>
+      <li><b>Servicios independientes</b> por canal, mensajes, tiempo real, archivos e IA: cada uno crece por separado</li>
+      <li><b>Bus de eventos</b>: los servicios se comunican sin depender uno del otro</li>
+      <li><b>IA separada del flujo crítico</b>: si cae, la atención sigue</li>
+      <li><b>Multi-empresa</b>: cada cliente aislado, con roles</li>
+      <li><b>Trazabilidad</b> de cada mensaje entre servicios y monitoreo</li>
+      <li><b>Idiomas</b> en la interfaz (es, en, pt) con pruebas de que no falten textos</li></ul></div>
+    <div class="card warn"><span class="tag a">Hay que construir</span><ul>
+      <li><b>Registro genérico con etapas</b> (base de todos los módulos)</li>
+      <li><b>Motor de módulos</b>: activar y desactivar por empresa y menú dinámico</li>
+      <li><b>Paquete de país</b>: moneda, impuestos, festivos y reglas como configuración</li>
+      <li><b>Pagos locales</b> y factura electrónica de México (CFDI)</li>
+      <li><b>Pruebas de carga</b> y metas de capacidad: todavía no las tenemos medidas</li></ul></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
+  <div class="foot"><span>Konectus</span><span>Escalabilidad · revisado en el repositorio</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">8</span>Controla todo sin depender de nadie</h2>
+  <div class="kicker">04 · Escalabilidad</div>
+  <h2>Escalar el negocio: que crecer no dependa de contratar vendedores</h2>
   <div class="g4">
-    <figure><img class="shot h420" src="img/20-modulos.jpg" alt="Módulos"><figcaption><b>Módulos:</b> activar, nivel de IA y precio por módulo.</figcaption></figure>
-    <figure><img class="shot h420" src="img/19-equipo.jpg" alt="Equipo"><figcaption><b>Equipo:</b> departamentos, reglas de asignación y roles.</figcaption></figure>
-    <figure><img class="shot h420" src="img/21-config-ia.jpg" alt="IA"><figcaption><b>IA:</b> nivel por módulo y qué pasa si falla.</figcaption></figure>
-    <figure><img class="shot h420" src="img/22-facturacion.jpg" alt="Facturación"><figcaption><b>Facturación:</b> desglose, proyección y tope.</figcaption></figure>
+    <div class="card ind"><h3>Autoservicio</h3><p>Las pymes prueban, configuran y pagan solas. Sin vendedor.</p></div>
+    <div class="card ind"><h3>Módulos como upsell</h3><p>El cliente empieza con el núcleo y paga más cuando activa módulos: el ingreso crece con él.</p></div>
+    <div class="card ai"><h3>IA por consumo</h3><p>Créditos con tope de gasto visible. Ingreso extra sin sorpresas para el cliente.</p></div>
+    <div class="card"><h3>Socios revendedores</h3><p>Agencias y consultores venden Konectus con su marca y lo implementan.</p></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
+  <table style="margin-top:20px">
+    <tr><th style="width:22%">Puerta de entrada</th><th>Cliente</th><th>Cómo se vende</th><th>Precio de referencia</th></tr>
+    <tr><td><b>1 · Autoservicio</b></td><td>Pymes B2C y B2B</td><td>Prueba gratis de 14 días, sin tarjeta</td><td>USD 20–60 por usuario al mes, cobrado en MXN</td></tr>
+    <tr><td><b>2 · Nichos</b></td><td>Financieras, cooperativas, colegios, despachos</td><td>Venta consultiva y piloto medido</td><td>USD 500–5,000 por cuenta al mes, o por resultado</td></tr>
+  </table>
+  <p class="note">Los precios son hipótesis a validar con los pilotos, no resultado de un estudio de mercado.</p>
+  <div class="foot"><span>Konectus</span><span>Escalabilidad</span></div>
+</section>
+
+<!-- ============ 05 MERCADO ============ -->
+<section class="slide dark">
+  <div class="act">05</div>
+  <h2 style="font-size:48px">Mercado: México primero, luego global</h2>
+  <p class="lead">Ganar un mercado grande y cercano y, con lo aprendido, abrir países por olas.</p>
+  <div class="foot"><span>Konectus</span><span>Mercado</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">04 · Cómo funcionaría</div>
-  <h2><span class="num">9</span>También desde el celular</h2>
-  <div class="g4" style="align-items:start">
-    <figure><img class="shot h470" src="img/23-midia-movil.jpg" alt="Mi día móvil" style="object-position:top center"><figcaption><b>Mi día</b> en el celular.</figcaption></figure>
-    <figure><img class="shot h470" src="img/24-bandeja-movil.jpg" alt="Bandeja móvil" style="object-position:top center"><figcaption><b>Bandeja</b> en el celular.</figcaption></figure>
-    <div style="grid-column: span 2"><h3>Para el equipo que atiende en movimiento</h3><p>Las mismas colas y acciones, con la IA ayudando a responder.</p><p>Las tareas pendientes, los traspasos y las aprobaciones se resuelven con un toque.</p></div>
+  <div class="kicker">05 · Mercado</div>
+  <h2>Por qué lanzar en México</h2>
+  <div class="g4">
+    <div class="card"><div class="big">5.4 M</div><p>unidades económicas en México. Casi todas son micro, pequeñas y medianas.</p></div>
+    <div class="card"><div class="big">~93%</div><p>de penetración de WhatsApp entre usuarios de mensajería. Es el canal número 1.</p></div>
+    <div class="card"><div class="big">10 M</div><p>de socios en cooperativas de ahorro y préstamo (SOCAP), y siguen creciendo.</p></div>
+    <div class="card"><div class="big">2025</div><p>nueva ley de datos personales. Las empresas necesitan cumplirla en sus chats.</p></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Cómo funcionaría</span></div>
+  <div class="g3" style="margin-top:18px">
+    <div class="card ind"><p><b>Regulación de cobranza:</b> CONDUSEF supervisa a los despachos de cobranza (REDECO) y limita los horarios de contacto. Es justo lo que nuestro módulo automatiza.</p></div>
+    <div class="card ind"><p><b>Idioma y cultura:</b> español, cercanía horaria con EE. UU. y un mercado que ya compra software en línea.</p></div>
+    <div class="card ind"><p><b>Competencia enfocada en ventas:</b> los CRM locales venden "más leads", no operación ni cumplimiento.</p></div>
+  </div>
+  <div class="src">Fuentes, contenido parafraseado: <a href="https://imco.org.mx/el-pais-de-las-mipymes/">IMCO con datos de INEGI, Censos Económicos 2024</a> · <a href="https://expansion.mx/tecnologia/2026/09/25/whatsapp-20-horas-al-mes-riesgos-datos-ciberseguridad">Expansión, Infobip Messaging Trends 2026</a> · <a href="https://es-us.noticias.yahoo.com/cpm-ampl%C3%ADa-base-socios-crece-054840895.html">cifras de la CNBV sobre socios de SOCAP</a> · <a href="https://www.creel.mx/publicaciones/alertas-clientes/federal-law-for-the-protection-of-personal-data-in-the-possession-of-private-parties/">Creel: nueva LFPDPPP</a> · <a href="https://www.gob.mx/condusef/prensa/consulta-el-redeco?idiom=es">CONDUSEF, REDECO</a> · <a href="https://www.condusef.gob.mx/?idc=771&idcat=1&p=contenido">CONDUSEF, prácticas de cobranza</a></div>
+  <div class="foot"><span>Konectus</span><span>Mercado</span></div>
 </section>
 
-<!-- ============ CÓMO LLEGAMOS ============ -->
 <section class="slide">
-  <div class="kicker">Cómo llegamos</div>
+  <div class="kicker">05 · Mercado</div>
+  <h2>Cómo entramos a México</h2>
+  <div class="g2">
+    <div class="card"><span class="tag">Puerta 1 · Pymes en autoservicio</span><ul>
+      <li>Comercio, servicios, clínicas, agencias pequeñas</li>
+      <li>Núcleo + Ventas + Soporte, con IA opcional</li>
+      <li>Precio en pesos, pago con tarjeta, OXXO o transferencia, y factura CFDI</li>
+      <li>Adquisición: contenido en español, plantillas gratuitas, socios</li></ul></div>
+    <div class="card ind"><span class="tag">Puerta 2 · Nicho de lanzamiento</span><ul>
+      <li><b>Cobranza por WhatsApp</b> para cooperativas (SOCAP), financieras, colegios privados y despachos de cobranza</li>
+      <li>Venta consultiva con un piloto pagado y medido (% de cartera recuperada)</li>
+      <li>Después: módulo de Quejas para financieras</li></ul></div>
+  </div>
+  <div class="card warn" style="margin-top:18px"><p><b>Ajuste pendiente:</b> los mockups actuales usan ejemplos de Colombia (PQRS, Ley 2300). Con el paquete de México se convierten en <b>Quejas y aclaraciones</b> y en las <b>reglas de cobranza de CONDUSEF</b>. El diseño de las pantallas no cambia, solo el contenido legal.</p></div>
+  <div class="foot"><span>Konectus</span><span>Mercado</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">05 · Mercado</div>
+  <h2>Global y multi-idioma: cómo funciona</h2>
+  <div class="steps">
+    <div class="card ok"><span class="tag g">Capa 1 · Ya existe</span><h3>Idioma de la interfaz</h3><p>Cada usuario elige su idioma. Hoy: español, inglés y portugués, con pruebas automáticas que avisan si falta un texto.</p></div>
+    <div class="arrow">→</div>
+    <div class="card ai"><span class="tag v">Capa 2 · Con IA</span><h3>Idioma de la conversación</h3><p>La IA detecta el idioma del cliente final y responde en él. Las plantillas de WhatsApp se guardan por idioma. Un agente en México puede atender a un cliente en inglés.</p></div>
+    <div class="arrow">→</div>
+    <div class="card ind"><span class="tag">Capa 3 · Por construir</span><h3>Paquete de país</h3><p>Moneda, impuestos y factura, medios de pago, reglas legales, días hábiles y festivos, formatos de teléfono y fecha.</p></div>
+  </div>
+  <p style="margin-top:20px"><b>La clave:</b> abrir un país es <b>configurar un paquete</b>, no hacer otra versión del producto. México es el primer paquete, y nos obliga a construir bien el mecanismo desde el inicio.</p>
+  <div class="foot"><span>Konectus</span><span>Mercado</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">05 · Mercado</div>
+  <h2>Expansión por olas (propuesta)</h2>
+  <table>
+    <tr><th style="width:15%">Ola</th><th style="width:28%">Mercados</th><th style="width:15%">Idioma</th><th>Por qué en este orden</th></tr>
+    <tr><td><b>1 · 0–12 meses</b></td><td>México</td><td>Español</td><td>Mercado grande, WhatsApp dominante, nicho de cobranza regulado</td></tr>
+    <tr><td><b>2 · 12–24 meses</b></td><td>Colombia, Perú, Chile, Ecuador; hispanos en EE. UU.</td><td>Español</td><td>Mismo idioma. Colombia ya tiene diseños de PQRS y cobranza</td></tr>
+    <tr><td><b>3 · 18–30 meses</b></td><td>Brasil</td><td>Portugués</td><td>El mayor mercado de WhatsApp en la región; la interfaz ya existe en portugués</td></tr>
+    <tr><td><b>4 · después</b></td><td>Resto del mundo, solo autoservicio</td><td>Inglés</td><td>Núcleo + Ventas + Soporte, sin módulos legales locales</td></tr>
+  </table>
+  <div class="card ind" style="margin-top:18px"><p><b>Regla para pasar a la siguiente ola:</b> que la anterior funcione sola. Propuesta: 50 clientes pagando, bajas por debajo del 5% al mes y un caso con retorno demostrado.</p></div>
+  <div class="foot"><span>Konectus</span><span>Mercado</span></div>
+</section>
+
+<!-- ============ 06 CÓMO FUNCIONA ============ -->
+<section class="slide dark">
+  <div class="act">06</div>
+  <h2 style="font-size:48px">Cómo lo vive un cliente</h2>
+  <p class="lead">El recorrido desde que conoce Konectus hasta su día a día. Haz clic en cualquier captura para verla completa.</p>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">1</span>Ve el precio exacto y crea su cuenta</h2>
+  <div class="g2">
+    <figure><img class="shot" src="img/01-precios.jpg" alt="Precios con calculadora"><figcaption><b>Precios:</b> calculadora con el total, tarifa de Meta sin recargo y sin permanencia. (Clic para ver la página completa.)</figcaption></figure>
+    <figure><img class="shot" src="img/02-registro.jpg" alt="Registro"><figcaption><b>Registro:</b> 14 días gratis, sin tarjeta de crédito.</figcaption></figure>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">2</span>Elige su plantilla y el tamaño de su equipo</h2>
+  <div class="g2">
+    <figure><img class="shot" src="img/03-onb-plantilla.jpg" alt="Elegir plantilla"><figcaption><b>Plantilla:</b> B2B, B2C o ambos, y su giro. Esto decide qué módulos llegan activos.</figcaption></figure>
+    <figure><img class="shot" src="img/04-onb-equipo.jpg" alt="Tamaño del equipo"><figcaption><b>Equipo:</b> de "solo yo" a más de 50. Esto decide si aparecen departamentos y supervisores.</figcaption></figure>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido · Canales e IA en el anexo</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">2b</span>…o lo configura conversando con la IA</h2>
+  <div class="side">
+    <figure><img class="shot" src="img/07-config-conversando.jpg" alt="Configurar conversando"></figure>
+    <div><p>La empresa describe cómo trabaja: <i>"Somos una cooperativa con 12,000 socios y cobramos cuotas con 5 días de gracia…"</i></p><p>La IA propone plantilla, módulos, reglas y niveles de IA, y muestra una <b>vista previa</b> antes de aplicar.</p><p>Todo se puede ajustar a mano o deshacer. Sin IA, el mismo resultado se logra con el asistente de 5 pasos.</p></div>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">3</span>Cada persona abre "Mi día" y atiende sin perder contexto</h2>
+  <div class="g2">
+    <figure><img class="shot" src="img/08-midia-pyme.jpg" alt="Mi día pyme"><figcaption><b>Mi día:</b> qué atender primero, ventas y soporte en una sola cola.</figcaption></figure>
+    <figure><img class="shot" src="img/12-bandeja.jpg" alt="Bandeja con traspaso"><figcaption><b>Bandeja:</b> la IA entrega el caso con motivo, intentos y datos clave. Desde el chat se crea un ticket, una promesa o un enlace de pago.</figcaption></figure>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">4</span>Vende y cobra con el módulo de su nicho</h2>
+  <div class="g2">
+    <figure><img class="shot" src="img/13-embudo.jpg" alt="Embudo de ventas"><figcaption><b>Ventas:</b> el embudo avisa qué negocios se enfrían. Sin IA funciona igual.</figcaption></figure>
+    <figure><img class="shot" src="img/15-recaudo-panel.jpg" alt="Panel de cobranza"><figcaption><b>Cobranza:</b> lo recuperado, las promesas y el cumplimiento (el ejemplo es de Colombia; en México aplican las reglas de CONDUSEF).</figcaption></figure>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">5</span>Controla costos y equipo sin depender de nadie</h2>
+  <div class="g2">
+    <figure><img class="shot" src="img/22-facturacion.jpg" alt="Facturación"><figcaption><b>Facturación:</b> desglose por módulo, consumo de IA, proyección y tope de gasto.</figcaption></figure>
+    <figure><img class="shot" src="img/19-equipo.jpg" alt="Equipo y departamentos"><figcaption><b>Equipo:</b> departamentos, reglas de asignación y roles. Solo aparece cuando el equipo crece.</figcaption></figure>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">06 · Recorrido</div>
+  <h2><span class="num">6</span>También desde el celular</h2>
+  <div style="display:flex;gap:28px;align-items:flex-start">
+    <figure style="flex:0 0 auto"><img class="phone" src="img/24-bandeja-movil.jpg" alt="Bandeja en el celular"><figcaption><b>Bandeja</b> en el celular.</figcaption></figure>
+    <figure style="flex:1 1 0"><img class="shot" src="img/23-midia-movil.jpg" alt="Mi día en el celular" style="aspect-ratio:auto;object-fit:contain;max-height:470px"><figcaption><b>Mi día</b> en el celular.</figcaption></figure>
+    <div style="flex:0 0 260px"><h3>Para quien atiende en movimiento</h3><p>Las mismas colas y acciones, con la IA ayudando a responder.</p><p>Pendientes, traspasos y aprobaciones se resuelven con un toque.</p></div>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Recorrido</span></div>
+</section>
+
+<!-- ============ 07 PLAN ============ -->
+<section class="slide dark">
+  <div class="act">07</div>
+  <h2 style="font-size:48px">Plan y decisiones</h2>
+  <p class="lead">Qué construir primero, qué riesgos vemos y qué tenemos que decidir como socios.</p>
+  <div class="foot"><span>Konectus</span><span>Plan</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">07 · Plan</div>
   <h2>Qué construir, en orden</h2>
-  <div class="g3">
-    <div class="card ind"><span class="tag">0–3 meses</span><ul><li>Frenar los frentes que no sumen</li><li>Base modular y registro genérico con etapas</li><li>Menú dinámico según módulos</li><li>Lanzar el núcleo en autoservicio</li><li>3 a 5 pilotos de cooperativas y recaudo</li></ul></div>
-    <div class="card"><span class="tag">3–6 meses</span><ul><li>Módulo PQRS con plazos legales</li><li>Agente IA de cobranza con aprobaciones</li><li>Importación y automatizaciones por fecha</li><li>Medios de pago locales</li></ul></div>
-    <div class="card"><span class="tag">6–18 meses</span><ul><li>Multi-cliente para BPO y agencias</li><li>VoIP con transcripción</li><li>México, Perú, Ecuador, Chile y Brasil</li><li>Plantillas legales por país</li></ul></div>
+  <div class="g4">
+    <div class="card ind"><span class="tag">0–3 meses</span><ul><li>Frenar lo que no sume</li><li>Registro genérico con etapas</li><li>Motor de módulos y menú dinámico</li><li>Nuevo diseño y "Mi día"</li><li>Paquete de México: pesos, CFDI y pagos locales</li></ul></div>
+    <div class="card"><span class="tag">3–6 meses</span><ul><li>Módulo de Cobranza</li><li>Importación desde Excel y recordatorios por fecha</li><li>3 a 5 pilotos pagados en México</li><li>Autoservicio abierto a pymes</li></ul></div>
+    <div class="card"><span class="tag">6–12 meses</span><ul><li>Quejas y aclaraciones</li><li>Tickets configurables</li><li>Programa de socios revendedores</li><li>IA que responde en el idioma del cliente</li></ul></div>
+    <div class="card"><span class="tag">12–24 meses</span><ul><li>Ola 2: LATAM en español</li><li>Multi-cliente y VoIP</li><li>Ola 3: Brasil</li></ul></div>
   </div>
-  <div class="g3" style="margin-top:22px">
-    <div><div class="big">10</div><p>clientes pagando antes de expandir a la región</p></div>
+  <div class="g3" style="margin-top:20px">
+    <div><div class="big">10</div><p>clientes pagando en México en 6 meses</p></div>
     <div><div class="big">&lt;5%</div><p>de bajas al mes</p></div>
     <div><div class="big">1</div><p>caso con retorno demostrado (% de cartera recuperada)</p></div>
   </div>
-  <div class="foot"><span>Konectus</span><span>Hoja de ruta</span></div>
+  <div class="foot"><span>Konectus</span><span>Plan · metas propuestas</span></div>
 </section>
 
 <section class="slide">
-  <div class="kicker">Cómo llegamos</div>
-  <h2>Riesgos y cómo evitarlos</h2>
+  <div class="kicker">07 · Plan</div>
+  <h2>Riesgos y cómo los evitamos</h2>
   <table>
     <tr><th style="width:34%">Riesgo</th><th>Cómo lo evitamos</th></tr>
-    <tr><td><b>Querer abarcar todo a la vez</b></td><td>Un núcleo y un nicho primero. Frenar lo que no sume.</td></tr>
-    <tr><td><b>No conseguir clientes pagando pronto</b></td><td>Pilotos pagados en 90 días, aunque sea a precio de lanzamiento.</td></tr>
-    <tr><td><b>Distribución</b></td><td>Socios que revenden con su marca y contenido por nicho.</td></tr>
-    <tr><td><b>Estabilidad y bloqueos de número</b></td><td>WhatsApp oficial por defecto; QR solo con aviso claro.</td></tr>
-    <tr><td><b>Costo de la IA</b></td><td>Medidor por acción, tope de gasto y nivel por módulo.</td></tr>
-    <tr><td><b>Base de datos actual</b></td><td>Registro genérico con etapas antes de vender nichos.</td></tr>
+    <tr><td><b>Querer abarcar todo a la vez</b></td><td>Un núcleo, un nicho y un país primero. Frenar lo que no sume.</td></tr>
+    <tr><td><b>No conseguir clientes que paguen pronto</b></td><td>Pilotos pagados en 90 días, aunque sea a precio de lanzamiento.</td></tr>
+    <tr><td><b>Distribución en México</b></td><td>Socios revendedores, contenido en español por nicho y asociaciones de cooperativas.</td></tr>
+    <tr><td><b>Bloqueos de número de WhatsApp</b></td><td>WhatsApp oficial por defecto; QR solo con aviso claro del riesgo.</td></tr>
+    <tr><td><b>Costo de la IA</b></td><td>Medidor por acción, tope de gasto y nivel de IA por módulo.</td></tr>
+    <tr><td><b>Errores legales por país</b></td><td>Reglas en el paquete de país, revisadas por un abogado local antes de vender.</td></tr>
+    <tr><td><b>Base de datos actual</b></td><td>Construir el registro genérico antes de vender módulos nuevos.</td></tr>
   </table>
-  <div class="foot"><span>Konectus</span><span>Riesgos</span></div>
+  <div class="foot"><span>Konectus</span><span>Plan</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">07 · Decisiones</div>
+  <h2>Lo que necesitamos decidir como socios</h2>
+  <div class="g2">
+    <div class="card ind"><h3>1 · Foco del lanzamiento</h3><p>¿Aceptamos "núcleo en autoservicio + Cobranza" como lanzamiento en México?</p></div>
+    <div class="card ind"><h3>2 · Qué congelamos</h3><p>¿Qué frentes actuales pausamos para liberar al equipo?</p></div>
+    <div class="card ind"><h3>3 · Orden de países e idiomas</h3><p>¿Confirmamos México → LATAM en español → Brasil → inglés, con la regla para pasar de ola?</p></div>
+    <div class="card ind"><h3>4 · Roles</h3><p>¿Quién vende los pilotos, quién construye el núcleo y quién lleva la parte legal de México?</p></div>
+    <div class="card ind"><h3>5 · Precios</h3><p>¿Validamos los rangos de referencia con los primeros pilotos?</p></div>
+    <div class="card ind"><h3>6 · Metas de 90 días</h3><p>¿Firmamos 3 a 5 pilotos y un primer caso con retorno medido?</p></div>
+  </div>
+  <div class="foot"><span>Konectus</span><span>Decisiones</span></div>
 </section>
 
 <section class="slide dark">
   <div class="kicker">Próximos pasos</div>
   <h1 style="font-size:52px">90 días para demostrarlo</h1>
-  <ul style="max-width:920px">
-    <li>Acordar el foco: núcleo en autoservicio + nicho de cooperativas y recaudo.</li>
+  <ul style="max-width:960px">
+    <li>Acordar el foco: núcleo en autoservicio + Cobranza en México.</li>
+    <li>Construir la base: registro genérico, motor de módulos y paquete de México.</li>
     <li>Llevar el nuevo diseño y "Mi día" al producto.</li>
-    <li>Construir la base modular y el registro genérico.</li>
-    <li>Firmar de 3 a 5 pilotos y medir el retorno.</li>
+    <li>Firmar de 3 a 5 pilotos pagados y medir el retorno.</li>
   </ul>
   <div class="foot"><span>Konectus</span><span>Gracias</span></div>
 </section>
@@ -429,50 +578,50 @@
   <div class="kicker">Anexo A · Flujo de pantallas (1/3)</div>
   <h2>Descubrir, registrarse y configurar</h2>
   <div class="flow">
-    <figure><img class="shot h150" src="img/01-precios.jpg" alt=""><figcaption><b>1.1</b> Precios</figcaption></figure>
-    <figure><img class="shot h150" src="img/02-registro.jpg" alt=""><figcaption><b>1.2</b> Registro</figcaption></figure>
-    <figure><img class="shot h150" src="img/03-onb-plantilla.jpg" alt=""><figcaption><b>2.2</b> Plantilla</figcaption></figure>
-    <figure><img class="shot h150" src="img/04-onb-equipo.jpg" alt=""><figcaption><b>2.3</b> Tu equipo</figcaption></figure>
-    <figure><img class="shot h150" src="img/05-onb-canales.jpg" alt=""><figcaption><b>2.4</b> Canales</figcaption></figure>
-    <figure><img class="shot h150" src="img/06-onb-ia.jpg" alt=""><figcaption><b>2.5</b> Nivel de IA</figcaption></figure>
-    <figure><img class="shot h150" src="img/07-config-conversando.jpg" alt=""><figcaption><b>2.6</b> Configurar conversando</figcaption></figure>
-    <figure><img class="shot h150" src="img/08-midia-pyme.jpg" alt=""><figcaption><b>3.1</b> Mi día pyme</figcaption></figure>
-    <figure><img class="shot h150" src="img/09-midia-ia.jpg" alt=""><figcaption><b>3.2</b> Mi día con IA</figcaption></figure>
-    <figure><img class="shot h150" src="img/10-midia-manual.jpg" alt=""><figcaption><b>3.3</b> Mi día sin IA</figcaption></figure>
+    <figure><img class="shot" src="img/01-precios.jpg" alt="Precios"><figcaption><b>1.1</b> Precios</figcaption></figure>
+    <figure><img class="shot" src="img/02-registro.jpg" alt="Registro"><figcaption><b>1.2</b> Registro</figcaption></figure>
+    <figure><img class="shot" src="img/03-onb-plantilla.jpg" alt="Plantilla"><figcaption><b>2.2</b> Plantilla</figcaption></figure>
+    <figure><img class="shot" src="img/04-onb-equipo.jpg" alt="Tu equipo"><figcaption><b>2.3</b> Tu equipo</figcaption></figure>
+    <figure><img class="shot" src="img/05-onb-canales.jpg" alt="Canales"><figcaption><b>2.4</b> Canales</figcaption></figure>
+    <figure><img class="shot" src="img/06-onb-ia.jpg" alt="Nivel de IA"><figcaption><b>2.5</b> Nivel de IA</figcaption></figure>
+    <figure><img class="shot" src="img/07-config-conversando.jpg" alt="Configurar conversando"><figcaption><b>2.6</b> Configurar conversando</figcaption></figure>
+    <figure><img class="shot" src="img/08-midia-pyme.jpg" alt="Mi día pyme"><figcaption><b>3.1</b> Mi día pyme</figcaption></figure>
+    <figure><img class="shot" src="img/09-midia-ia.jpg" alt="Mi día con IA"><figcaption><b>3.2</b> Mi día con IA</figcaption></figure>
+    <figure><img class="shot" src="img/10-midia-manual.jpg" alt="Mi día sin IA"><figcaption><b>3.3</b> Mi día sin IA</figcaption></figure>
   </div>
-  <div class="foot"><span>Konectus</span><span>Anexo</span></div>
+  <div class="foot"><span>Konectus</span><span>Anexo · clic para ampliar</span></div>
 </section>
 
 <section class="slide">
   <div class="kicker">Anexo A · Flujo de pantallas (2/3)</div>
   <h2>Operación diaria, nichos y configuración</h2>
   <div class="flow">
-    <figure><img class="shot h150" src="img/11-recaudo-vacio.jpg" alt=""><figcaption><b>3.4</b> Recaudo primer uso</figcaption></figure>
-    <figure><img class="shot h150" src="img/12-bandeja.jpg" alt=""><figcaption><b>4.1</b> Bandeja</figcaption></figure>
-    <figure><img class="shot h150" src="img/13-embudo.jpg" alt=""><figcaption><b>4.2</b> Embudo</figcaption></figure>
-    <figure><img class="shot h150" src="img/14-importar-cartera.jpg" alt=""><figcaption><b>5.1</b> Importar cartera</figcaption></figure>
-    <figure><img class="shot h150" src="img/15-recaudo-panel.jpg" alt=""><figcaption><b>5.2</b> Panel de recaudo</figcaption></figure>
-    <figure><img class="shot h150" src="img/16-pqrs-lista.jpg" alt=""><figcaption><b>5.3</b> Lista de PQRS</figcaption></figure>
-    <figure><img class="shot h150" src="img/17-pqrs-detalle.jpg" alt=""><figcaption><b>5.4</b> Detalle de PQRS</figcaption></figure>
-    <figure><img class="shot h150" src="img/18-config-home.jpg" alt=""><figcaption><b>7.1</b> Configuración</figcaption></figure>
-    <figure><img class="shot h150" src="img/19-equipo.jpg" alt=""><figcaption><b>7.2</b> Equipo</figcaption></figure>
-    <figure><img class="shot h150" src="img/20-modulos.jpg" alt=""><figcaption><b>7.3</b> Módulos</figcaption></figure>
+    <figure><img class="shot" src="img/11-recaudo-vacio.jpg" alt="Cobranza primer uso"><figcaption><b>3.4</b> Cobranza, primer uso</figcaption></figure>
+    <figure><img class="shot" src="img/12-bandeja.jpg" alt="Bandeja"><figcaption><b>4.1</b> Bandeja</figcaption></figure>
+    <figure><img class="shot" src="img/13-embudo.jpg" alt="Embudo"><figcaption><b>4.2</b> Embudo</figcaption></figure>
+    <figure><img class="shot" src="img/14-importar-cartera.jpg" alt="Importar cartera"><figcaption><b>5.1</b> Importar cartera</figcaption></figure>
+    <figure><img class="shot" src="img/15-recaudo-panel.jpg" alt="Panel de cobranza"><figcaption><b>5.2</b> Panel de cobranza</figcaption></figure>
+    <figure><img class="shot" src="img/16-pqrs-lista.jpg" alt="Lista de quejas"><figcaption><b>5.3</b> Quejas (PQRS), lista</figcaption></figure>
+    <figure><img class="shot" src="img/17-pqrs-detalle.jpg" alt="Detalle de queja"><figcaption><b>5.4</b> Quejas (PQRS), detalle</figcaption></figure>
+    <figure><img class="shot" src="img/18-config-home.jpg" alt="Configuración"><figcaption><b>7.1</b> Configuración</figcaption></figure>
+    <figure><img class="shot" src="img/19-equipo.jpg" alt="Equipo"><figcaption><b>7.2</b> Equipo</figcaption></figure>
+    <figure><img class="shot" src="img/20-modulos.jpg" alt="Módulos"><figcaption><b>7.3</b> Módulos</figcaption></figure>
   </div>
-  <div class="foot"><span>Konectus</span><span>Anexo</span></div>
+  <div class="foot"><span>Konectus</span><span>Anexo · clic para ampliar</span></div>
 </section>
 
 <section class="slide">
   <div class="kicker">Anexo A · Flujo de pantallas (3/3)</div>
   <h2>Control, móvil y volver a entrar</h2>
   <div class="flow">
-    <figure><img class="shot h150" src="img/21-config-ia.jpg" alt=""><figcaption><b>7.4</b> Inteligencia artificial</figcaption></figure>
-    <figure><img class="shot h150" src="img/22-facturacion.jpg" alt=""><figcaption><b>7.5</b> Facturación</figcaption></figure>
-    <figure><img class="shot h150" src="img/23-midia-movil.jpg" alt="" style="object-position:top center"><figcaption><b>8.1</b> Mi día móvil</figcaption></figure>
-    <figure><img class="shot h150" src="img/24-bandeja-movil.jpg" alt="" style="object-position:top center"><figcaption><b>8.2</b> Bandeja móvil</figcaption></figure>
-    <figure><img class="shot h150" src="img/25-login.jpg" alt=""><figcaption><b>9.1</b> Iniciar sesión</figcaption></figure>
+    <figure><img class="shot" src="img/21-config-ia.jpg" alt="Inteligencia artificial"><figcaption><b>7.4</b> Inteligencia artificial</figcaption></figure>
+    <figure><img class="shot" src="img/22-facturacion.jpg" alt="Facturación"><figcaption><b>7.5</b> Facturación</figcaption></figure>
+    <figure><img class="shot" src="img/23-midia-movil.jpg" alt="Mi día móvil" style="object-fit:contain"><figcaption><b>8.1</b> Mi día móvil</figcaption></figure>
+    <figure><img class="shot" src="img/24-bandeja-movil.jpg" alt="Bandeja móvil" style="object-fit:contain"><figcaption><b>8.2</b> Bandeja móvil</figcaption></figure>
+    <figure><img class="shot" src="img/25-login.jpg" alt="Iniciar sesión"><figcaption><b>9.1</b> Iniciar sesión</figcaption></figure>
   </div>
-  <p style="margin-top:20px;font-size:15px">Pantallas de referencia con el menú anterior, disponibles en el proyecto de diseño: 4.3 Tickets, 4.4 Contactos, 4.5 Ficha 360, 4.6 Analítica, 6.1 Agentes IA, 6.2 Aprobaciones, 6.3 Constructor de flujos, 7.6 Soporte.</p>
-  <div class="foot"><span>Konectus</span><span>Anexo</span></div>
+  <p style="margin-top:18px;font-size:14.5px">Pantallas con el menú anterior, disponibles en el proyecto de diseño: 4.3 Tickets, 4.4 Contactos, 4.5 Ficha 360, 4.6 Analítica, 6.1 Agentes IA, 6.2 Aprobaciones, 6.3 Constructor de flujos y 7.6 Soporte.</p>
+  <div class="foot"><span>Konectus</span><span>Anexo · clic para ampliar</span></div>
 </section>
 
 <section class="slide">
@@ -491,7 +640,7 @@
       <tr><td>3.1</td><td>Mi día pyme</td><td>7299cc1039d1498c93771eb194ce2ee1</td></tr>
       <tr><td>3.2</td><td>Mi día con IA</td><td>3487279e5ead4555baf395ae096b5954</td></tr>
       <tr><td>3.3</td><td>Mi día sin IA</td><td>00775bf4dcfa4b12bea1bcf96b5e83a1</td></tr>
-      <tr><td>3.4</td><td>Recaudo primer uso</td><td>0537496a555f469380cb07b6f3c18abd</td></tr>
+      <tr><td>3.4</td><td>Cobranza, primer uso</td><td>0537496a555f469380cb07b6f3c18abd</td></tr>
       <tr><td>4.1</td><td>Bandeja</td><td>74104e062a804632a085f47189ee376d</td></tr>
       <tr><td>4.2</td><td>Embudo</td><td>97e9eb776a864d128f2eafb58d95bb76</td></tr>
       <tr><td>4.3</td><td>Tickets (menú anterior)</td><td>fc924148e6ed419d9f638e22e5a5d4d0</td></tr>
@@ -502,9 +651,9 @@
       <tr><th>#</th><th>Pantalla</th><th>ID</th></tr>
       <tr><td>4.6</td><td>Analítica (menú anterior)</td><td>52cd974a1562430ea8303c904be47174</td></tr>
       <tr><td>5.1</td><td>Importar cartera</td><td>ef78354cc7ab4cafbb291c92ee75b54d</td></tr>
-      <tr><td>5.2</td><td>Panel de recaudo</td><td>8c6dbc270306468e9c8e14907c29eeae</td></tr>
-      <tr><td>5.3</td><td>Lista de PQRS</td><td>f73c513176ec42a3b9522e41da630bdf</td></tr>
-      <tr><td>5.4</td><td>Detalle de PQRS</td><td>bb0b82dc58154dc19d80a9548beccddd</td></tr>
+      <tr><td>5.2</td><td>Panel de cobranza</td><td>8c6dbc270306468e9c8e14907c29eeae</td></tr>
+      <tr><td>5.3</td><td>Quejas, lista</td><td>f73c513176ec42a3b9522e41da630bdf</td></tr>
+      <tr><td>5.4</td><td>Quejas, detalle</td><td>bb0b82dc58154dc19d80a9548beccddd</td></tr>
       <tr><td>6.1</td><td>Agentes IA (menú anterior)</td><td>e98f1d3cd21c4c5ca7a13ad877a02a82</td></tr>
       <tr><td>6.2</td><td>Aprobaciones (menú anterior)</td><td>58e99eb3631840a2815edfc55e77f5be</td></tr>
       <tr><td>6.3</td><td>Constructor (menú anterior)</td><td>b6fa5724fe00460ea55ed24ace094372</td></tr>
@@ -525,7 +674,7 @@
 </div></div>
 
 <div class="bar"><i id="prog"></i></div>
-<div class="hint">← → para navegar · clic en una captura para ampliarla · P para imprimir</div>
+<div class="hint">← → para navegar · clic en una captura para verla completa · P para imprimir</div>
 <div class="nav"><button id="prev" aria-label="Anterior">‹</button><span id="count"></span><button id="next" aria-label="Siguiente">›</button></div>
 <div class="lb" id="lb" role="dialog" aria-label="Captura ampliada"><span>Clic o Esc para cerrar</span><img id="lbimg" alt=""></div>
 
@@ -551,10 +700,10 @@
   document.getElementById('prev').onclick = () => show(cur - 1);
   document.getElementById('next').onclick = () => show(cur + 1);
 
-  // Ampliar capturas.
+  // Ampliar capturas: abre la imagen completa, sin recorte.
   const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg');
   deck.addEventListener('click', (e) => {
-    const img = e.target.closest('img.shot');
+    const img = e.target.closest('img.shot, img.phone');
     if (!img) return;
     lbimg.src = img.src; lbimg.alt = img.alt; lb.classList.add('open'); lb.scrollTop = 0;
   });
