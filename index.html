@@ -69,6 +69,7 @@
   .steps .card { flex: 1; }
   .arrow { align-self: center; color: var(--slate-500); font-size: 22px; }
   .note { font-size: 13.5px; color: var(--slate-500); margin-top: 10px; }
+  .compact .card { padding: 12px 16px; } .compact .card p { font-size: 13.5px; line-height: 1.4; }
   /* Controles */
   .bar { position: fixed; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(255,255,255,.08); z-index: 5; }
   .bar i { display: block; height: 100%; background: linear-gradient(90deg, var(--indigo), var(--violet)); transition: width .25s; }
@@ -116,7 +117,7 @@
   <div class="layers">
     <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>1 · Hoy</b><span>Tenemos la tecnología de un CRM omnicanal con IA, pero el mercado nos ve como "otro CRM de WhatsApp".</span></div>
     <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>2 · El problema</b><span>Competir solo con bandeja + bot es guerra de precios: eso se copia en semanas con IA.</span></div>
-    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>3 · La propuesta</b><span>Un núcleo común + módulos que se activan (Ventas, Soporte, Cobranza, Quejas…) + IA opcional por módulo.</span></div>
+    <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>3 · La propuesta</b><span>Un CRM conversacional que se arma como bloques: núcleo común + tableros configurables + módulos que se activan + IA opcional.</span></div>
     <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>4 · Cómo escala</b><span>Un nicho, un país o una integración nueva es configuración, no un producto nuevo.</span></div>
     <div class="layer" style="background:var(--violet-50);border:1px solid #DDD6FE"><b>5 · Mercado</b><span>Empresa global desde el día 1: lanzamos desde México y vendemos a cualquier país, en 3 idiomas, con precio en USD y en autoservicio. Luego, más integraciones.</span></div>
   </div>
@@ -200,17 +201,69 @@
 </section>
 
 <section class="slide">
+  <div class="kicker">03 · Qué es Konectus</div>
+  <h2>¿Sigue siendo un CRM? Sí, pero es más que eso</h2>
+  <div class="g3">
+    <div class="card"><span class="tag">CRM tradicional</span><p>HubSpot, Salesforce o Pipedrive: una base de contactos y un embudo de ventas. Las conversaciones viven en otra herramienta.</p></div>
+    <div class="card"><span class="tag">Bandeja de WhatsApp</span><p>Wati, Leadsales o Whaticket: muchos chats en un lugar, con un CRM básico encima.</p></div>
+    <div class="card ind"><span class="tag">Konectus</span><p><b>Plataforma de operación con clientes:</b> el CRM es el corazón, pero sobre él cada empresa arma sus tableros, procesos y módulos, y lo opera todo desde la conversación.</p></div>
+  </div>
+  <table style="margin-top:18px">
+    <tr><th style="width:26%">Qué hace</th><th>Cómo se ve en Konectus</th></tr>
+    <tr><td><b>Lo que hace un CRM</b></td><td>Contactos, embudos, negocios, tareas y reportes. Esto no cambia.</td></tr>
+    <tr><td><b>Lo que agrega</b></td><td>Bandeja omnicanal, tableros configurables para cualquier proceso, módulos que se activan e IA opcional</td></tr>
+    <tr><td><b>Cómo lo explicamos</b></td><td><i>"El CRM conversacional que se arma como bloques: cada empresa configura sus tableros y procesos sin programar."</i></td></tr>
+  </table>
+  <p class="note">Propuesta de categoría: "CRM conversacional configurable". Comercialmente seguimos diciendo "CRM", porque es lo que el cliente busca en Google; la diferencia está en que se adapta a cualquier proceso.</p>
+  <div class="foot"><span>Konectus</span><span>Qué es</span></div>
+</section>
+
+<section class="slide">
   <div class="kicker">03 · Módulos</div>
   <h2>Cuatro capas, un solo código</h2>
   <div class="layers">
     <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>4 · Paquete de país</b><span>Idioma, moneda, impuestos y factura, medios de pago, reglas legales, días festivos</span></div>
-    <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>3 · Plantillas por giro</b><span>Tienda en línea · Cooperativa · Colegio · Clínica · Agencia · Despacho de cobranza</span></div>
+    <div class="layer" style="background:#FAF5FF;border:1px solid #E9D5FF"><b>3 · Plantillas por nicho grande</b><span>Comercio y e-commerce · Salud · Educación · Inmobiliario · Servicios financieros · Turismo · Automotriz · Servicios profesionales</span></div>
     <div class="layer" style="background:var(--indigo-50);border:1px solid #C7D2FE"><b>2 · Módulos que se activan</b><span>Ventas · Soporte y tickets · Cobranza · Quejas · Citas · Campañas · VoIP · Multi-cliente</span></div>
     <div class="layer" style="background:var(--violet-50);border:1px solid #DDD6FE"><b>IA opcional</b><span>En cada módulo se elige: Sin IA · Asistido · Copiloto · Autónomo</span></div>
     <div class="layer" style="background:var(--slate-50);border:1px solid var(--slate-200)"><b>1 · Núcleo (todos)</b><span>Canales · Bandeja · Mi día · Contactos · Registros con etapas · Reglas · Analítica · Permisos · API</span></div>
   </div>
   <p style="margin-top:16px">El núcleo es lo que tiene cualquier cliente. Los módulos agregan procesos. Las plantillas solo <b>preconfiguran</b> módulos para un giro. El paquete de país adapta todo a las leyes y costumbres locales.</p>
   <div class="foot"><span>Konectus</span><span>Módulos</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Configuración</div>
+  <h2>Configurar es tan fácil como agregar un tablero</h2>
+  <p style="margin-bottom:14px">El administrador de la empresa lo hace solo, sin programador y sin hablar con nosotros. Todo se puede deshacer.</p>
+  <div class="g3 compact">
+    <div class="card ind"><span class="tag">Ejemplo 1 · Agregar un tablero</span><p><b>"Quiero un tablero de Postventa."</b></p><p>Configuración → Tableros → Nuevo → elige una plantilla o empieza en blanco → nombra las etapas (Recibido, En revisión, Resuelto) → listo.</p><p>Aparece en el menú del departamento y las conversaciones pueden moverse ahí.</p></div>
+    <div class="card"><span class="tag">Ejemplo 2 · Agregar campos y etapas</span><p><b>"Necesito guardar la placa del auto."</b></p><p>Agrega el campo "Placa" al contacto o al registro. Se ve en el chat y se puede filtrar y exportar.</p><p>Las etapas se reordenan arrastrando.</p></div>
+    <div class="card"><span class="tag">Ejemplo 3 · Activar un módulo</span><p><b>"Ahora quiero agendar citas."</b></p><p>Módulos → Citas → Activar. Llegan su tablero, sus campos, sus recordatorios y su panel, ya configurados.</p><p>El precio se ve antes de activarlo.</p></div>
+    <div class="card"><span class="tag">Ejemplo 4 · Crear una regla</span><p><b>"Si un cliente no responde en 2 días, recordarle."</b></p><p>Cuando pasa esto → haz esto. Sin código, con plantillas de reglas comunes.</p></div>
+    <div class="card ai"><span class="tag v">Ejemplo 5 · Pedírselo a la IA</span><p><b>"Agrega un tablero para garantías con 4 etapas y avísame si uno lleva más de 5 días."</b></p><p>La IA lo arma y muestra una vista previa. Tú confirmas.</p></div>
+    <div class="card"><span class="tag">Ejemplo 6 · Sumar equipo o canal</span><p><b>"Contraté a 2 agentes y abrí Instagram."</b></p><p>Invitas por correo y conectas el canal en minutos. El menú crece solo: con más personas aparecen departamentos y supervisores.</p></div>
+  </div>
+  <p class="note">Hoy el producto ya tiene tableros con etapas por departamento. Lo nuevo es hacerlos configurables para cualquier proceso, no solo para ventas.</p>
+  <div class="foot"><span>Konectus</span><span>Configuración</span></div>
+</section>
+
+<section class="slide">
+  <div class="kicker">03 · Nichos</div>
+  <h2>Pensamos en nichos grandes, no en nichos pequeños</h2>
+  <table>
+    <tr><th style="width:20%">Nicho grande</th><th style="width:30%">Quién es</th><th style="width:26%">Tableros de la plantilla</th><th>Módulos</th></tr>
+    <tr><td><b>Comercio y e-commerce</b></td><td>Tiendas físicas y en línea, distribuidores</td><td>Ventas, Pedidos, Postventa</td><td>Ventas · Soporte · Campañas</td></tr>
+    <tr><td><b>Salud y bienestar</b></td><td>Clínicas, dentistas, estética, gimnasios</td><td>Pacientes nuevos, Citas, Seguimiento</td><td>Citas · Soporte · Campañas</td></tr>
+    <tr><td><b>Educación</b></td><td>Colegios, universidades, cursos en línea</td><td>Admisiones, Inscripciones, Atención a padres</td><td>Ventas · Soporte · Cobranza</td></tr>
+    <tr><td><b>Inmobiliario</b></td><td>Agencias, desarrolladoras, rentas</td><td>Prospectos, Visitas, Cierre</td><td>Ventas · Citas</td></tr>
+    <tr><td><b>Servicios financieros</b></td><td>Financieras, seguros, cooperativas</td><td>Solicitudes, Cartera, Quejas</td><td>Ventas · Cobranza · Quejas</td></tr>
+    <tr><td><b>Turismo y hotelería</b></td><td>Hoteles, agencias de viaje, tours</td><td>Cotizaciones, Reservas, Estancia</td><td>Ventas · Soporte · Campañas</td></tr>
+    <tr><td><b>Automotriz</b></td><td>Agencias, talleres, refacciones</td><td>Prospectos, Pruebas de manejo, Servicio</td><td>Ventas · Citas · Soporte</td></tr>
+    <tr><td><b>Servicios profesionales</b></td><td>Despachos, agencias, consultoras</td><td>Prospectos, Proyectos, Facturación</td><td>Ventas · Soporte · Multi-cliente</td></tr>
+  </table>
+  <p class="note">Cada nicho es solo una <b>plantilla</b> (tableros + campos + módulos + reglas) sobre el mismo núcleo. Sumar un nicho nuevo es diseñar una plantilla, no programar un producto.</p>
+  <div class="foot"><span>Konectus</span><span>Nichos</span></div>
 </section>
 
 <section class="slide">
